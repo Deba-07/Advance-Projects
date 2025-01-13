@@ -1,20 +1,22 @@
-import React, { useState } from "react";
 import { Element } from "react-scroll";
-import Button from "../components/Button.jsx";
+import { useState } from "react";
 import clsx from "clsx";
-import Countup from "react-countup";
+import CountUp from "react-countup";
 import { plans } from "../constants/index.jsx";
+import Button from "../components/Button.jsx";
 
-function Pricing() {
+const Pricing = () => {
   const [monthly, setMonthly] = useState(false);
+
   return (
     <section>
       <Element name="pricing">
         <div className="container">
           <div className="max-w-960 pricing-head_before relative mx-auto border-l border-r border-s2 bg-s1/50 pb-40 pt-28 max-xl:max-w-4xl max-lg:border-none max-md:pb-32 max-md:pt-16">
-            <h3 className="h3 max-lg:h4 max-md:h5 z- 3 relative mx-auto mb-14 max-w-lg text-center text-p4 max-md:mb-11 max-sm:max-w-sm">
+            <h3 className="h3 max-lg:h4 max-md:h5 z-3 relative mx-auto mb-14 max-w-lg text-center text-p4 max-md:mb-11 max-sm:max-w-sm">
               Flexible pricing for teams of all sizes
             </h3>
+
             <div className="relative z-4 mx-auto flex w-[375px] rounded-3xl border-[3px] border-s4/25 bg-s1/50 p-2 backdrop-blur-[6px] max-md:w-[310px]">
               <button
                 className={clsx("pricing-head_btn", monthly && "text-p4")}
@@ -28,23 +30,25 @@ function Pricing() {
               >
                 Annual
               </button>
+
               <div
                 className={clsx(
                   "g4 rounded-14 before:h-100 pricing-head_btn_before absolute left-2 top-2 h-[calc(100%-16px)] w-[calc(50%-8px)] overflow-hidden shadow-400 transition-transform duration-500",
-                  !monthly && "translate-x-full "
+                  !monthly && "translate-x-full"
                 )}
               />
             </div>
+
             <div className="pricing-bg">
               <img
-                src="/public/images/bg-outlines.svg"
+                src="/images/bg-outlines.svg"
                 width={960}
                 height={380}
                 alt="outline"
                 className="relative z-2"
               />
               <img
-                src="/public/images/bg-outlines-fill.png"
+                src="/images/bg-outlines-fill.png"
                 width={960}
                 height={380}
                 alt="outline"
@@ -52,7 +56,8 @@ function Pricing() {
               />
             </div>
           </div>
-          {/* pricing section */}
+
+          {/*  pricing section*/}
           <div className="scroll-hide relative z-2 -mt-12 flex items-start max-xl:gap-5 max-xl:overflow-auto max-xl:pt-6">
             {plans.map((plan, index) => (
               <div
@@ -62,6 +67,7 @@ function Pricing() {
                 {index === 1 && (
                   <div className="g4 absolute h-330 left-0 right-0 top-0 z-1 rounded-tl-3xl rounded-tr-3xl" />
                 )}
+
                 <div
                   className={clsx(
                     "absolute left-0 right-0 z-2 flex items-center justify-center",
@@ -77,6 +83,7 @@ function Pricing() {
                     )}
                   />
                 </div>
+
                 <div
                   className={clsx(
                     "relative flex flex-col items-center",
@@ -85,12 +92,13 @@ function Pricing() {
                 >
                   <div
                     className={clsx(
-                      "small-2 rounded-20 relative z-2 mx-auto mb-6 px-4 py-1.5 border-2 uppercase",
+                      "small-2 rounded-20 relative z-2 mx-auto mb-6 border-2 px-4 py-1.5 uppercase",
                       index === 1 ? "border-p3 text-p3" : "border-p1 text-p1"
                     )}
                   >
                     {plan.title}
                   </div>
+
                   <div className="relative z-2 flex items-center justify-center">
                     <div
                       className={clsx(
@@ -98,8 +106,8 @@ function Pricing() {
                         index === 1 ? "text-p3" : "text-p4"
                       )}
                     >
-                      $
-                      <Countup
+                      ${" "}
+                      <CountUp
                         start={plan.priceMonthly}
                         end={monthly ? plan.priceMonthly : plan.priceYearly}
                         duration={0.4}
@@ -112,6 +120,7 @@ function Pricing() {
                     </div>
                   </div>
                 </div>
+
                 <div
                   className={clsx(
                     "body-1 relative z-2 mb-10 w-full border-b-s2 pb-9 text-center text-p4",
@@ -120,6 +129,7 @@ function Pricing() {
                 >
                   {plan.caption}
                 </div>
+
                 <ul className="mx-auto space-y-4 xl:px-7">
                   {plan.features.map((feature) => (
                     <li
@@ -135,12 +145,14 @@ function Pricing() {
                     </li>
                   ))}
                 </ul>
+
                 <div className="mt-10 flex w-full justify-center">
                   <Button icon={plan.icon}>Get Started</Button>
                 </div>
+
                 {index === 1 && (
-                  <p className="small-compact mt-9 text-center text-p3 before:content-['-'] before:mx-2.5 after:mx-2.5 after:content-['-']">
-                    Limited Time Offer
+                  <p className="small-compact mt-9 text-center text-p3 before:mx-2.5 before:content-['-'] after:mx-2.5 after:content-['-']">
+                    Limited time offer
                   </p>
                 )}
               </div>
@@ -150,6 +162,6 @@ function Pricing() {
       </Element>
     </section>
   );
-}
+};
 
 export default Pricing;
