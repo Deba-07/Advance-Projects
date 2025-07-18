@@ -1,12 +1,60 @@
-# React + Vite
+# 🍃 Mojito Store – Animated Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the **Mojito Store Landing Page** – a fresh, modern, and interactive one-page site built using **React 19**, **Tailwind CSS 4**, and smooth **GSAP-powered web animations**. This landing page is designed to showcase a mojito brand/product with eye-catching transitions and responsive design.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo
 
-## Expanding the ESLint configuration
+🔗 [View Live Site](https://steady-palmier-62963b.netlify.app/) 
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ✨ Highlights
+
+- 🍹 Clean, elegant design inspired by natural and refreshing mojito branding
+- 🎞️ Smooth entrance animations, scroll effects, and section transitions using **GSAP**
+- ⚛️ Built with modern **React 19**
+- 💨 Responsive and utility-first styling using **Tailwind CSS 4**
+- 🧩 Component-based structure for easy scalability
+- 📱 Optimized for mobile and desktop with **react-responsive**
+
+---
+
+## 🧰 Tech Stack
+
+| Tool / Library           | Purpose                          |
+|--------------------------|----------------------------------|
+| React 19                 | UI framework                     |
+| Tailwind CSS 4           | Styling with utility classes     |
+| GSAP + @gsap/react       | Animation engine                 |
+| React Responsive         | Device-based rendering           |
+| Vite 7                   | Lightning-fast dev & build tool  |
+| ESLint                   | Linting & code quality checks    |
+
+---
+
+
+---
+
+## 🧪 Installation & Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/mojito-landing.git
+cd mojito-landing
+
+# Install dependencies
+npm install
+
+# Run the development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview the production build
+npm run preview
+```
+
+---
