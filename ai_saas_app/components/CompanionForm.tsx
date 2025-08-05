@@ -62,6 +62,7 @@ const CompanionForm = () => {
                   className="input"
                 />
               </FormControl>
+              <FormMessage />
             </FormItem>
           )}
         />
